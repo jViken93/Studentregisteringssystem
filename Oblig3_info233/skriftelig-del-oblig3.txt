@@ -1,0 +1,20 @@
+LEVERING
+Joakim Viken (jvi015) og Ingvild Hagesæter(zej006) leverer denne samlet.
+Vi hadde begge samme utgangpunkt etter første innlevering, er på samme gruppe og studiekamerater på fritida.
+Ingvild støtte på store problemer med Scene Builder, som rett og slett var for stort dimensjonert på skjermen
+til at man kunne orientere seg i arbeidet. Det ble uten nytte forsøkt å oppdatere IntelliJ for å løse problemet.
+
+
+UTFORMING
+Utformingsmønster tar sterkt utgangspunkt i UML-diagrammet fra oppgaven, og er videre delt i både ordinære
+klasser og egne DAO-klasser for hvær av disse. DAO-mønsteret har vært spesielt nyttig for å strukturere
+uthenting av data i et forholdsvis stort prosjekt. Slike klasser verner om databasetilgangen for resten av applikasjonen.
+
+Klassebasert/objektorientert utforming gir generelt en god oversikt, med strenge rammer for modifisering av
+variabler. I relasjonsskjema er dette spesielt viktig for å oppfylle krav til de ulike entitetene.
+
+Kodeduplikasjon har imidelertid vært en gjennomående "feilmelding", og her kunne mye vert gjort annerledes:
+Databasetilknytningen er underveis forsøkt formulert på en mest mulig elegant måte via en egen klasse og én respektiv
+kontruktør i DAO-klassene hvor denne trengs(Singleton?). SQL queries har skyld i mestparten av duplikatene ved veis ende:
+Disse kunne vært egne metoder som genererte basert på input, fremfor å deklarere variablen på nytt. Dette ville ikke
+nødvendigvis gjort utformingen enklere, men smartere/nettere.

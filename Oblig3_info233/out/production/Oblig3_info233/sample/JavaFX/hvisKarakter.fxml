@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Controller_hvisKarakter">
+   <children>
+      <BorderPane accessibleText="hei hei" layoutX="-5.0" prefHeight="450.0" prefWidth="708.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="114.0" prefWidth="708.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="413.0" layoutY="55.0" mnemonicParsing="false" onAction="#searchButton" text="Søk" />
+                  <TextField fx:id="studentSearchNr" layoutX="277.0" layoutY="55.0" prefHeight="39.0" prefWidth="108.0" />
+                  <Label layoutX="220.0" layoutY="1.0" text="Student søk" />
+                  <TextField fx:id="studentSearchName" layoutX="37.0" layoutY="55.0" />
+                  <Label layoutX="128.0" layoutY="28.0" text="Navn" />
+                  <Label layoutX="302.0" layoutY="28.0" text="Nr" />
+               </children>
+            </AnchorPane>
+         </bottom>
+         <left>
+            <VBox prefHeight="335.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" text="Home" />
+               </children></VBox>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="studentTable" layoutX="8.0" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="studentName" prefWidth="88.0" text="Navn" />
+                      <TableColumn fx:id="kull" prefWidth="111.0" text="Kull" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="karakterTable" layoutX="208.0" prefHeight="200.0" prefWidth="168.0">
+                    <columns>
+                      <TableColumn fx:id="karakter" prefWidth="84.0" text="Karakter" />
+                      <TableColumn fx:id="arstall" prefWidth="83.0" text="Årstall" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="kurs" layoutX="376.0" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="kursKode" prefWidth="100.0" text="Kode" />
+                      <TableColumn fx:id="kursNavn" prefWidth="99.0" text="Navn" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </center></BorderPane>
+   </children>
+</AnchorPane>
